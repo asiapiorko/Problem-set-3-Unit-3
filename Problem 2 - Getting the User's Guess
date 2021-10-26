@@ -15,25 +15,26 @@ For this function, you may assume that all the letters in secretWord and letters
 """
 
 
-import string
-
-def getGuessedWord(lettersGuessed):
+def getGuessedWord(secretWord, lettersGuessed):
     '''
+    secretWord: string, the word the user is guessing
     lettersGuessed: list, what letters have been guessed so far
-    returns: string, comprised of letters that represents what letters have not
-      yet been guessed.
+    returns: boolean, True if all the letters of secretWord are in lettersGuessed;
+      False otherwise
     '''
+    # FILL IN YOUR CODE HERE...
     
-    import string
-
-    alphabet = string.ascii_lowercase
+    ans = ''
     
-    ans = '' 
+    for letter in lettersGuessed:
     
-    for element in alphabet:
-        if element in lettersGuessed:
-            ans = ans
-        elif element not in lettersGuessed:
-            ans = ans + '  ' + element
-    return ans
+        for element in secretWord:
+        
+            if element in lettersGuessed:
+                ans = ans + element
+            else:
+                ans = ans + '_ '
+                
+        return ans
+        
                 
