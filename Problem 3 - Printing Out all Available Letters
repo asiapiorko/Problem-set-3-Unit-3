@@ -29,14 +29,14 @@ def getAvailableLetters(lettersGuessed):
     
     alphabet = string.ascii_lowercase
     
-    ans = '' 
+    result = '' 
     
     for element in alphabet:
     
         if element in lettersGuessed:
-            ans = ans
+            result = result
         elif element not in lettersGuessed:
-            ans = ans + '  ' + element
+            result = result + '  ' + element
             
-    return ans
+    return result
                 
