@@ -19,10 +19,9 @@ def isWordGuessed(secretWord, lettersGuessed):
     '''
     # FILL IN YOUR CODE HERE...
     
-    for i in lettersGuessed:
-        if i in secretWord:
-            return True
-        else:
+    for letter in secretWord:
+        if letter not in lettersGuessed:
             return False
+    return True
   
 
